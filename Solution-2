@@ -1,0 +1,31 @@
+//java program to find Maximum element in the array using recursion 
+import java.io.*;
+import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) throws Exception {
+        // write your code here
+        Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		int []arr = new int[n];
+		for(int i=0;i<arr.length;i++){
+		    arr[i]=sc.nextInt();
+		}
+		int x=findMax(arr,0);
+		System.out.println(x);
+    }
+
+    public static int findMax(int[] arr, int idx){
+        if(idx==arr.length-1){
+            return arr[idx];
+        }
+        int tempMax = findMax(arr,idx+1);
+	    if(tempMax>arr[idx]){
+	        return tempMax;
+	    }
+	    else{
+	        return arr[idx];
+	    }
+    }
+}
