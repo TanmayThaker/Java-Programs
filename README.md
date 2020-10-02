@@ -1,2 +1,2 @@
 # Java-Programs
-## This repo contains some of the fundamentals data structures and algorithms questions and their solutions.
+## This repo contains foundations of **JAVA PROGRAMMING** and basic **data structures and algorithms** questions and their solutions.
