@@ -1,0 +1,61 @@
+
+// EXIT POINT OF A MATRIX
+
+import java.io.*;
+import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) throws Exception {
+        // write your code here
+        Scanner s = new Scanner(System.in);
+        int n = s.nextInt();
+        int m = s.nextInt();
+        int[][] arr = new int[n][m];
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
+                arr[i][j] = s.nextInt();
+            }
+        }
+        int dir=0;
+        int i=0;
+        int j=0;
+        while(true){
+            dir=(dir+arr[i][j])%4;
+            // EAST
+            if(dir==0){
+                j++;
+            }
+            // SOUTH
+            else if(dir==1){
+                i++;
+            }
+            // WEST
+            else if(dir==2){
+                j--;
+            }
+            // NORTH
+            else if(dir==3){
+                i--;
+            }
+            if(i<0){
+                i++;
+                break;
+            }
+            else if(j<0){
+                j++;
+                break;
+            }
+            else if(i==arr.length){
+                i--;
+                break;
+            }
+            else if(j==arr.length){
+                j--;
+                break;
+            }
+        }
+        System.out.println(i);
+        System.out.println(j);
+    }
+}
